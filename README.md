@@ -2,6 +2,16 @@
 
 University final group project for the CSDE (Computer Science Development Exercise) module.
 
+## How to
+- Folders
+   - *The documentation folder just stores the original copies of the assignment documentation and doesn't require changing*
+   - *The to-submit folder is the folder that will be submitted once the assignment is complete*
+   - *Changes can be worked on in the outsstanding-work branch, and committed to the master-branch via a pull request when ready*
+
+* Select the *Branch: Master* and change into the *outstanding-work* branch. Download the file you wish to change, once the changes have     been made, re-upload into the outstanding-work branch with the same file name, updating the changes made from the old file.
+* Once the file is complete, a pull request can be opened to add the file to the master branch, from the outstanding work branch.
+
+
 ## Tasks
 
 -	Read all the documentation, especially User Stories & Client Priorities
