@@ -76,4 +76,4 @@ Carry out the planned the tasks, including:
 
 * **Aston Turner** - [Aston13](https://github.com/Aston13)
 
-See also the list of [contributors](https://github.com/Aston13/Calculator/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Aston13/GP3/graphs/contributors) who participated in this project.
