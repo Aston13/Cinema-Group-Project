@@ -21,20 +21,23 @@
         }					
     </style>
 
-	<?php 
-		foreach($css_files as $file): ?>
-		<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
-	<?php endforeach; ?>
-
-	<?php foreach($js_files as $file): ?>
-		<script src="<?php echo $file; ?>"></script>
-	<?php endforeach; ?>
 
 </head>
 <body>
 	<b id="welcome">Welcome, <i><?php echo $login_session; ?></i>!</b>
 	<br>
 	<b id="logout"><a href="logout">Log Out</a></b>
-	<?php echo $output; ?>
+
+	<h1>Bookings</h1>
+	
+	<h2>Make a booking</h2>
+	<label>Start by entering your member ID:</label>
+		<input name ="newBooking" placeholder="Member ID" type="text">
+	<br>
+
+	<h2>Check a booking number</h2>
+	<label>Enter your booking reference number:</label>
+		<input name ="bookingRef" placeholder="Booking Number" type="text">
+
 </body>
 </html>

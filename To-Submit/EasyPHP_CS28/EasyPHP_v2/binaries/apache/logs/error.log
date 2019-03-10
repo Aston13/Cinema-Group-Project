@@ -485,11 +485,48 @@
 [Wed Mar 06 16:34:41.714496 2019] [mpm_winnt:notice] [pid 4272:tid 676] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Wed Mar 06 16:34:43.716629 2019] [mpm_winnt:notice] [pid 9456:tid 752] AH00364: Child: All worker threads have exited.
 [Wed Mar 06 16:34:43.757883 2019] [mpm_winnt:notice] [pid 4272:tid 676] AH00430: Parent: Child process 9456 exited successfully.
-[Fri Mar 08 12:10:50.297091 2019] [mpm_winnt:notice] [pid 9624:tid 764] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
-[Fri Mar 08 12:10:50.297091 2019] [mpm_winnt:notice] [pid 9624:tid 764] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
-[Fri Mar 08 12:10:50.303420 2019] [core:notice] [pid 9624:tid 764] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
-[Fri Mar 08 12:10:50.312259 2019] [mpm_winnt:notice] [pid 9624:tid 764] AH00418: Parent: Created child process 12336
-[Fri Mar 08 12:10:51.105991 2019] [mpm_winnt:notice] [pid 12336:tid 700] AH00354: Child: Starting 64 worker threads.
-[Fri Mar 08 12:12:44.515252 2019] [mpm_winnt:notice] [pid 9624:tid 764] AH00422: Parent: Received shutdown signal -- Shutting down the server.
-[Fri Mar 08 12:12:46.541161 2019] [mpm_winnt:notice] [pid 12336:tid 700] AH00364: Child: All worker threads have exited.
-[Fri Mar 08 12:12:46.614742 2019] [mpm_winnt:notice] [pid 9624:tid 764] AH00430: Parent: Child process 12336 exited successfully.
+[Sat Mar 09 23:21:57.913397 2019] [mpm_winnt:notice] [pid 1796:tid 628] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Sat Mar 09 23:21:57.913397 2019] [mpm_winnt:notice] [pid 1796:tid 628] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Sat Mar 09 23:21:57.913397 2019] [core:notice] [pid 1796:tid 628] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Sat Mar 09 23:21:57.971397 2019] [mpm_winnt:notice] [pid 1796:tid 628] AH00418: Parent: Created child process 10492
+[Sat Mar 09 23:21:58.867383 2019] [mpm_winnt:notice] [pid 10492:tid 648] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 10 01:29:21.027239 2019] [:error] [pid 10492:tid 1176] [client 127.0.0.1:61800] PHP Parse error:  syntax error, unexpected '$output' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\controllers\\main.php on line 171
+[Sun Mar 10 01:46:05.231441 2019] [mpm_winnt:notice] [pid 1796:tid 628] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Mar 10 01:46:07.233756 2019] [mpm_winnt:notice] [pid 10492:tid 648] AH00364: Child: All worker threads have exited.
+[Sun Mar 10 01:46:07.316623 2019] [mpm_winnt:notice] [pid 1796:tid 628] AH00430: Parent: Child process 10492 exited successfully.
+[Sun Mar 10 11:07:33.507383 2019] [mpm_winnt:notice] [pid 13172:tid 664] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Sun Mar 10 11:07:33.508383 2019] [mpm_winnt:notice] [pid 13172:tid 664] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Sun Mar 10 11:07:33.508383 2019] [core:notice] [pid 13172:tid 664] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Sun Mar 10 11:07:33.612455 2019] [mpm_winnt:notice] [pid 13172:tid 664] AH00418: Parent: Created child process 4032
+[Sun Mar 10 11:07:34.431369 2019] [mpm_winnt:notice] [pid 4032:tid 712] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 10 12:18:17.316608 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62715] PHP Parse error:  syntax error, unexpected '$tmpl' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 23, referer: http://localhost:8080/mice/index.php/main/sys_performance
+[Sun Mar 10 12:18:19.809832 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62715] PHP Parse error:  syntax error, unexpected '$tmpl' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 23
+[Sun Mar 10 12:18:22.641868 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62715] PHP Parse error:  syntax error, unexpected '$tmpl' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 23
+[Sun Mar 10 12:24:28.504304 2019] [:error] [pid 4032:tid 1180] [client 127.0.0.1:62773] PHP Parse error:  syntax error, unexpected 'cinema' (T_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 26
+[Sun Mar 10 12:27:30.113173 2019] [:error] [pid 4032:tid 1180] [client 127.0.0.1:62794] PHP Parse error:  syntax error, unexpected '$cinema' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 25
+[Sun Mar 10 12:39:12.416983 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62920] PHP Parse error:  syntax error, unexpected 'cinema' (T_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 25, referer: http://localhost:8080/mice/index.php/main/sys_performance
+[Sun Mar 10 12:47:13.574155 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62950] PHP Parse error:  syntax error, unexpected '"SELECT cinemaNo FROM cinema W' (T_CONSTANT_ENCAPSED_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 17
+[Sun Mar 10 12:47:43.357221 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62956] PHP Parse error:  syntax error, unexpected '$cinema' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 17
+[Sun Mar 10 12:48:49.826893 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62963] PHP Parse error:  syntax error, unexpected '$cinema' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 17
+[Sun Mar 10 12:49:13.911170 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62969] PHP Parse error:  syntax error, unexpected ')' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 17
+[Sun Mar 10 12:49:31.866219 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:62975] PHP Fatal error:  Call to a member function execute() on a non-object in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 19, referer: http://localhost:8080/mice/index.php/main/sys_performance
+[Sun Mar 10 12:54:31.075723 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:63032] PHP Parse error:  syntax error, unexpected '"' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 23, referer: http://localhost:8080/mice/index.php/main/staff_view
+[Sun Mar 10 13:09:26.809807 2019] [:error] [pid 4032:tid 1196] [client 127.0.0.1:63076] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 22, referer: http://localhost:8080/mice/index.php/main/sys_booking
+[Sun Mar 10 13:14:42.382240 2019] [:error] [pid 4032:tid 1180] [client 127.0.0.1:63155] PHP Parse error:  syntax error, unexpected 'cinemaNo' (T_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 10
+[Sun Mar 10 15:05:25.987634 2019] [:error] [pid 4032:tid 1204] [client 127.0.0.1:64168] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 22
+[Sun Mar 10 15:05:54.119555 2019] [:error] [pid 4032:tid 1204] [client 127.0.0.1:64171] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 22
+[Sun Mar 10 15:07:21.083630 2019] [mpm_winnt:notice] [pid 13172:tid 664] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Mar 10 15:07:23.105744 2019] [mpm_winnt:notice] [pid 4032:tid 712] AH00364: Child: All worker threads have exited.
+[Sun Mar 10 15:07:23.418256 2019] [mpm_winnt:notice] [pid 13172:tid 664] AH00430: Parent: Child process 4032 exited successfully.
+[Sun Mar 10 15:07:37.195824 2019] [mpm_winnt:notice] [pid 10284:tid 624] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Sun Mar 10 15:07:37.195824 2019] [mpm_winnt:notice] [pid 10284:tid 624] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Sun Mar 10 15:07:37.195824 2019] [core:notice] [pid 10284:tid 624] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Sun Mar 10 15:07:37.203824 2019] [mpm_winnt:notice] [pid 10284:tid 624] AH00418: Parent: Created child process 1132
+[Sun Mar 10 15:07:37.951987 2019] [mpm_winnt:notice] [pid 1132:tid 708] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 10 15:08:39.001273 2019] [:error] [pid 1132:tid 1204] [client 127.0.0.1:64224] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 22, referer: http://127.0.0.1:8080/mice/index.php/main/staff_view
+[Sun Mar 10 15:44:46.738656 2019] [:error] [pid 1132:tid 1204] [client 127.0.0.1:64378] PHP Parse error:  syntax error, unexpected 'NULL' (T_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 38
+[Sun Mar 10 15:45:08.880882 2019] [:error] [pid 1132:tid 1204] [client 127.0.0.1:64381] PHP Parse error:  syntax error, unexpected 'Any' (T_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 38
+[Sun Mar 10 15:45:29.078939 2019] [:error] [pid 1132:tid 1204] [client 127.0.0.1:64384] PHP Parse error:  syntax error, unexpected 'Anlky' (T_STRING) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 38
+[Sun Mar 10 18:13:59.060777 2019] [mpm_winnt:notice] [pid 10284:tid 624] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Mar 10 18:14:01.092020 2019] [mpm_winnt:notice] [pid 1132:tid 708] AH00364: Child: All worker threads have exited.
+[Sun Mar 10 18:14:01.138899 2019] [mpm_winnt:notice] [pid 10284:tid 624] AH00430: Parent: Child process 1132 exited successfully.
