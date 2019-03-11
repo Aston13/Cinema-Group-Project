@@ -21,18 +21,25 @@
 			CREATE TEMPORARY TABLE temp AS 
 			(
 			SELECT
-				A.screenNo, A.perfDate, A.startTime, B.filmTitle
+				DATE_FORMAT(A.perfDate, '%D %M %Y') AS Date, TIME_FORMAT(A.startTime, '%H:%i') AS Time, 
+				C.cinemaName AS Cinema, A.screenNo AS Screen,
+				B.filmTitle AS Film
 			FROM
 				performance AS A
 			JOIN 
 				film AS B 
 				ON A.filmNo = B.filmNo
+			JOIN
+				cinema AS C
+				ON A.cinemaNo = C.cinemaNo
 			WHERE 
 				A.cinemaNo LIKE '$cinemaNo'
 				AND A.screenNo LIKE '$screenNo'
 				AND B.filmTitle LIKE '%$filmName%'
 				AND A.startTime > '$startTime%'
 				AND A.perfDate LIKE '%$exactDate%'
+			ORDER BY
+				A.perfDate ASC, A.startTime ASC
 			)");
 			$query = $this->db->query('SELECT * FROM temp;');
 			echo $this->table->generate($query);

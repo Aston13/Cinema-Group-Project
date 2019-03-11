@@ -59,7 +59,7 @@
 				<label>Film Name:</label>
 				<input name ="filmName" placeholder="Film Name" type="text">
 
-				<label>Start Time:</label>
+				<label>Starts From:</label>
 				<input type="time" name="startTime" min="00:00" max="24:00">
 
 				<label>Date:</label>
