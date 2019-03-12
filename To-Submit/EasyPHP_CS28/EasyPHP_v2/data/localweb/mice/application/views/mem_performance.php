@@ -18,7 +18,22 @@
         p.p-centre {
             text-align: center;
             font-family: Arial;
-        }					
+        }
+		.container {
+			display:flex;
+			flex-direction:row;
+			justify-content: center;
+			width: 100%;
+		}		
+		.mytable {
+			width: 50%;
+		}
+		.resultbuttons {
+			width: 50%;
+		}
+		.resultbutton {
+			width: 100%;
+		}				
     </style>
 
 </head>
@@ -39,6 +54,9 @@
 
 		<div id="query">
     	    <form action="" method="post">
+				<label>Location:</label>
+				<input name ="location" placeholder="Location" type="text">
+
                 <label>Select Cinema:</label>
                 <!-- <input id="name" name="username" placeholder="username" type="text"> --->
 				<select name ="cinema">
@@ -67,10 +85,12 @@
 					<?php echo date('Y-m-d'); ?>
 				>
 				
-				<input name="submit" type="submit" value=" Search ">
+				<input name="search" type="submit" value="Search">
                 
             </form>
-   		 </div>
-				<?php include('query.php'); ?>
+   		</div>
+		<div class = "container"> 
+			<?php include('query.php'); ?>
+		</div>
 </body>
 </html>

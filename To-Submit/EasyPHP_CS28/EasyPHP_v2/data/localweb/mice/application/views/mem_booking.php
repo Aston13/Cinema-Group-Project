@@ -35,55 +35,7 @@
 	
 	<div id="bookings">
     	<form action="" method="post">
-			<h2>Make a booking</h2>
-			<h3><label>Enter booking details:</label></h3>
-			<br>
-			<form action="" method="post">
-                <label>Cinema:</label>
-				<select name ="cinema">
-					<option value ="%3">Rialto</option>
-					<option value ="%1">Intu</option>
-					<option value ="%2">Phoenix</option>
-					<option value ="%4">Intimate</option>
-				</select>
-				<br>
-				<label>Screen:</label>
-				<!-- Required tags? -->
-				<select name ="screen">
-					<option value ="%1">1</option>
-					<option value ="%2">2</option>
-					<option value ="%3">3</option>
-				</select>
-				<br>
-				<label>Film Name:</label>
-				<input name ="filmName" placeholder="Film Name" type="text">
-				<br>
-				<label>Date:</label>
-				<input type="date" name="exactDate" min=
-					<?php echo date('Y-m-d'); ?>
-				>
-				<br>
-				<label>Start Time:</label>
-				<input type="time" name="startTime" min="00:00" max="24:00">
-				<br>
-				<label>Seats Required:</label>
-				<select name ="seatsRequired">
-					<option value ="%1">1</option>
-					<option value ="%2">2</option>
-					<option value ="%3">3</option>
-					<option value ="%4">4</option>
-					<option value ="%5">5</option>
-					<option value ="%6">6</option>
-					<option value ="%7">7</option>
-					<option value ="%8">8</option>
-					<option value ="%9">9</option>
-					<option value ="%10">10</option>
-				</select>
-				<br>
-				<input name="submit_avail" type="submit" value="Check Availability">
-                
-            </form>
-			<br>
+
 
 			<h2>Cancel a booking</h2>
 			<label>Enter your member ID number and booking number to cancel</label>
@@ -95,7 +47,16 @@
 			<h2>Check a booking number</h2>
 			<label>Enter your booking reference number to check your bookings:</label>
 			<input name ="checkBooking" placeholder="Booking Number" type="text">
-			<input name="submit_check" type="submit" value="Go">
+			<input name="submit_check" type="submit" value="Check">
+
+			<h2>Cancel your membership</h2>
+			<h3>If you confirm your cancellation, your membership status will be revoked
+			and you will be redirected to the login page</h3>
+			<label>Enter your password to confirm your cancellation:</label>
+			<input name ="cancelMembership" type="password" placeholder="**********">
+			<input name="submit_cancel_mem" type="submit" value="Cancel Membership">
+
+
 
 		</form>
 	</div>

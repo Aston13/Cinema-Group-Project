@@ -1,64 +1,12 @@
 <?php
 	// Define $variables
 	$error = 'cant be left blank'; // Variable To Store Error Message 
-	
+	$today = date("M,d,Y h:i:s A"); 
 	// Connect to SQL Database
 	$conn = mysqli_connect("localhost", "root", "", "mice");
 	
-	// Make a new booking
-	if (isset($_POST['submit_avail'])) {
-		$cinemaNo = $_POST['cinema'];
-		$startTime = $_POST['startTime'];
-		$filmName = $_POST['filmName'];
-		$exactDate = $_POST['exactDate'];
-		$seatsRequired = $_POST['seatsRequired'];
-		$screenNo = $_POST['screen'];
-		
-		$tmpl = array ('table_open' => '<table class="mytable">');
-		$this->table->set_template($tmpl); 
-		$this->db->query('drop table if exists temp');
-
-		// Extract required booking data using a query and set it in a temp table
-		// cinemaName as cinema, filmName, seatsRequired
-		$this->db->query("
-		CREATE TEMPORARY TABLE temp AS 
-		(
-		SELECT
-			P.perfDate, P.startTime, C.cinemaName, F.filmTitle,
-			S.price, S.numberOfSeats
-		FROM
-			performance AS P
-		JOIN 
-			film AS F 
-			ON P.filmNo = F.filmNo
-		JOIN
-			cinema AS C
-			ON P.cinemaNo = C.cinemaNo
-		JOIN
-			screen AS S
-			ON S.screenNo = P.cinemaNo AND S.cinemaNo = P.screenNo
-		WHERE
-			S.numberOfSeats > '$seatsRequired'
-			AND P.perfDate = '$exactDate'
-			AND P.startTime = '$startTime'
-			AND P.cinemaNo = '$cinemaNo'
-			AND P.screenNo LIKE '$screenNo'
-			AND F.filmTitle LIKE '%$filmName%'
-		)");
-		$availablePerformances = mysql_result(mysql_query("SELECT COUNT(perfDate) FROM temp"),0);
-
-		if($availablePerformances > 0){
-			$query = $this->db->query('SELECT * FROM temp;');
-			echo $this->table->generate($query);
-		} else {
-			echo("Sorry no performances are available that match your criteria.
-			 Please check our performances page to view listings.");
-		}
-
-	}
-
 	// Cancel booking
-	else if(isset($_POST['submit_cancel'])){
+	if (isset($_POST['submit_cancel'])){
 		$enteredID = $_POST['cancelBooking']; // Entered member number
 		$bookingNo = $_POST['bookingNo']; // Entered booking number
 
@@ -102,7 +50,6 @@
 	// Check booking details and permission to access screen
 	else if(isset($_POST['submit_check'])){
 		$checkBooking = $_POST['checkBooking']; // Entered booking number
-
 		$tmpl = array ('table_open' => '<table class="mytable">');
 		$this->table->set_template($tmpl); 
 		$this->db->query('drop table if exists temp');
@@ -129,15 +76,48 @@
 		// Check if booking exists, if it does not, then the entered booking number is incorrect
 		$bookingExist = mysql_result(mysql_query("SELECT COUNT(bookingNo) FROM temp"),0);
 		if($bookingExist < 1){
+			//permission denied - error message
 			echo("Permission denied. This booking number <b>$checkBooking</b> doesnt exist for your account $user_check.");
+			
+			//write failed attempt to entry_log.txt
+			$myfile = fopen("application/entry_logs.txt", "a") or die("Unable to open file!");
+			$txt = "'$today': Member '$user_check' failed to gain entry to booking '$checkBooking'.";
+			fwrite($myfile, "\r\n". $txt);
+			fclose($myfile);
+
 		} else{
 			$dateRef = mysql_result(mysql_query("SELECT perfDate FROM temp"),0);
 			$screenRef = mysql_result(mysql_query("SELECT screenNo FROM temp"),0);
 			$filmRef = mysql_result(mysql_query("SELECT filmTitle FROM temp"),0);
+			//permission granted
 			echo ("Your booking number $checkBooking permits you to enter screen $screenRef on $dateRef to watch $filmRef.");
+			
+			//write granted attempt to entry_log.txt
+			$myfile = fopen("application/entry_logs.txt", "a") or die("Unable to open file!");
+			$txt = "'$today': Member '$user_check' was granted entry to booking '$checkBooking'.";
+			fwrite($myfile, "\r\n". $txt);
+			fclose($myfile);
+		}
+	}
+
+	else if(isset($_POST['submit_cancel_mem'])){
+		$enteredPass = $_POST['cancelMembership'];
+		$checkCredentials = mysql_result(mysql_query("SELECT password FROM member WHERE memberNo = $user_check"),0);
+		if (($user_check) > 9500) {
+			echo("staff can't cancel their own membership.");
+		}
+		else if (($checkCredentials) == ($enteredPass)){
+			echo("cancelled");
+			mysql_query("UPDATE member SET memberStat = 'Cancelled' WHERE memberNo = $user_check");
+			session_start(); 
+			session_destroy(); // Destroying All Sessions 
+			//header('Location:); // Redirecting To Home Page
+			header('Location:http://localhost:8080/mice/index.php');
+
+		} else {
+			echo("invalid password, please enter the correct password to cancel your membership");
 		}
 	}
 
 	mysqli_close($conn); // Closing Connection 	
-
 ?>

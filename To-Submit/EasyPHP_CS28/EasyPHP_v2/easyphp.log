@@ -593,3 +593,29 @@
 11/03 01:57:24 EasyPHP ServerBase::TimerProc : GetProcessVersion MySQL (pid: 12644) error 5
 11/03 01:57:26 EasyPHP EasyPHP Stop the servers
 11/03 01:57:26 EasyPHP End EasyPHP...
+11/03 23:26:05 EasyPHP EasyPHP Servers starting
+11/03 23:26:07 EasyPHP Apache CreateProcess "C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+11/03 23:26:07 EasyPHP CreateProcess "C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\my.ini" --language=english"
+11/03 23:26:12 EasyPHP EasyPHP Check version
+12/03 03:54:34 EasyPHP EasyPHP Stop the servers
+12/03 03:54:34 EasyPHP Apache stop event: ap8812_shutdown
+12/03 03:54:35 EasyPHP MySqlSutdown event = MySQLShutdown13888
+12/03 03:54:37 EasyPHP ServerBase::TimerProc : GetProcessVersion Apache (pid: 8812) error 5
+12/03 03:54:38 EasyPHP ServerBase::TimerProc : GetProcessVersion MySQL (pid: 13888) error 5
+12/03 03:54:41 EasyPHP EasyPHP Stop the servers
+12/03 03:54:41 EasyPHP End EasyPHP...
+12/03 05:06:53 EasyPHP EasyPHP Servers starting
+12/03 05:07:01 EasyPHP Apache CreateProcess "C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+12/03 05:07:01 EasyPHP CreateProcess "C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\my.ini" --language=english"
+12/03 05:07:06 EasyPHP EasyPHP Check version
+12/03 08:30:05 EasyPHP EasyPHP Stop the servers
+12/03 08:30:05 EasyPHP Apache stop event: ap10568_shutdown
+12/03 08:30:05 EasyPHP MySqlSutdown event = MySQLShutdown14332
+12/03 08:30:07 EasyPHP ServerBase::TimerProc : GetProcessVersion Apache (pid: 10568) error 5
+12/03 08:30:09 EasyPHP ServerBase::TimerProc : GetProcessVersion MySQL (pid: 14332) error 5
+12/03 08:30:12 EasyPHP EasyPHP Stop the servers
+12/03 08:30:12 EasyPHP End EasyPHP...
+12/03 13:57:38 EasyPHP EasyPHP Servers starting
+12/03 13:57:48 EasyPHP Apache CreateProcess "C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+12/03 13:57:48 EasyPHP CreateProcess "C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\my.ini" --language=english"
+12/03 13:57:53 EasyPHP EasyPHP Check version
