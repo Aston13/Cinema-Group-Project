@@ -162,9 +162,10 @@ public function sys_performance()
 	
 	$crud->set_table('performance');
 	$crud->set_subject('Performance');
-	$crud->fields('perfNo', 'perfDate', 'startTime', 'seatsRemain');
-	$crud->required_fields('perfNo', 'perfDate', 'startTime', 'seatsRemain');
-	$crud->display_as('perfNo', 'Performance Number');
+	$crud->fields('perfNo', 'screenNo', 'cinemaNo', 'filmNo', 'perfDate', 'startTime', 'seatsRemain');
+	$crud->set_relation('cinemaNo','cinema','cinemaName');
+	$crud->required_fields('screenNo', 'cinemaNo', 'filmNo', 'perfDate', 'startTime', 'seatsRemain');
+	$crud->display_as('cinemaNo', 'Cinema');
 	
 	$output = $crud->render();
 	$this->sys_performance_output($output);
@@ -321,5 +322,10 @@ function mem_performance_output($output = null)
 	public function logout()
 	{	
 		$this->load->view('logout.php');
+	}
+	public function perf_query1_view()
+	{	
+		$this->load->view('header_staff');
+		$this->load->view('perf_query1_view.php');
 	}
 }

@@ -14,7 +14,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>Staff Portal</h1>
+		<h1>Festival Director's Portal</h1>
 		<div>
 			<ul id="nav">
 				<li><a href='<?php echo site_url('main/staff_view')?>'>Home</a></li>
@@ -26,6 +26,7 @@
 				<li><a href='<?php echo site_url('main/sys_performance')?>'>Performance</a></li>
 				<ul id="rightnav">
 					<li><a href='<?php echo site_url('main/help')?>'>Help</a></li>
+					<li><a href='<?php echo site_url('main/member_view')?>'>View as Member</a></li>
 				</ul>
 			</ul>
 		</div>

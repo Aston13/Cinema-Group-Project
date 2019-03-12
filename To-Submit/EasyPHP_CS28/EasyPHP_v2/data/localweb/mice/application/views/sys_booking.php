@@ -8,7 +8,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Staff Portal</title>
+	<title>Festival Director's Portal</title>
 
     <style>
         h1 {
@@ -32,7 +32,7 @@
 
 </head>
 <body>
-	<b id="welcome">Welcome Manager <i><?php echo $login_session; ?></i>.</b>
+	<b id="welcome">Welcome Director <i><?php echo $login_session; ?></i>.</b>
 	<br>
 	<b id="logout"><a href="logout">Log Out</a></b>
 	<?php echo $output; ?>

@@ -13,6 +13,8 @@
 			$conn = mysqli_connect("localhost", "root", "", "mice"); 
 			// SQL query to fetch information of registerd users and finds user match. 
 			$query = "SELECT memberNo, password from member where memberNo=? AND password=? LIMIT 1"; 
+			//Query to get membership status
+			$membershipQuery = mysql_result(mysql_query("SELECT memberStat FROM member WHERE memberNo= $username"),0);
 			// To protect MySQL injection for Security purpose 
 			$stmt = $conn->prepare($query); 
 			echo($username);
@@ -26,9 +28,12 @@
 				if($username >= 9501){
 					header("location: ./index.php/main/staff_view"); // Redirecting To Staff Portal  
 				}
-				else {
+				else if ($membershipQuery == 'Active'){
 					header("location: ./index.php/main/member_view"); // Redirecting To Member Portal
+				} else {
+					echo("Your membership is not active, contact the director to activate your membership");
 				}
+
 			} else { 
 				$error = "Username or Password is invalid"; 
 			} 
