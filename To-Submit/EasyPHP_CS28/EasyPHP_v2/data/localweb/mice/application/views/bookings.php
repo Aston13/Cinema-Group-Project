@@ -37,6 +37,13 @@
 			if($bookingExist < 1){
 				echo("No bookings were found for the booking number <b>$bookingNo</b> under your account $user_check.");
 			} else {
+				$seatsCancel = mysql_result(mysql_query("SELECT seatsRequired FROM mice.booking WHERE bookingNo = $bookingNo"),0);
+				$perfNoCancel = mysql_result(mysql_query("SELECT perfNo FROM mice.booking WHERE bookingNo = $bookingNo"),0);
+				$seatsRemainCancel = mysql_result(mysql_query("SELECT seatsRemain FROM mice.performance WHERE perfNo = $perfNoCancel"),0);
+
+				// Add cancelled seats back onto remaining seats for performance
+				mysql_query("UPDATE `performance` SET `seatsRemain` = ($seatsRemainCancel+$seatsCancel) WHERE `perfNo` = $perfNoCancel;");
+				// Delete booking from database
 				mysql_query("DELETE FROM mice.booking WHERE bookingNo = $bookingNo");
 				$dateRef = mysql_result(mysql_query("SELECT perfDate FROM temp"),0);
 				$screenRef = mysql_result(mysql_query("SELECT screenNo FROM temp"),0);

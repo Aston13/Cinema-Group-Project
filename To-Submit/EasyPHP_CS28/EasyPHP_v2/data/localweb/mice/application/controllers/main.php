@@ -178,71 +178,6 @@ function sys_performance_output($output = null)
 /************           End of Staff Portal            *************/
 
 /************              Member Portal               *************/
-/************     Cinema System for member start     *************/
-	public function mem_cinema()
-	{	
-		$this->load->view('header_member');
-		$crud = new grocery_CRUD();
-		$crud->set_theme('datatables');
-		
-		$crud->set_table('cinema');
-		$crud->set_subject('Cinema');
-		$crud->fields('cinemaNo', 'cinemaName', 'address', 'location', 'managerName', 'noOfScreens');
-		$crud->required_fields('cinemaNo', 'cinemaName', 'address', 'location', 'managerName', 'noOfScreens');
-		
-		$crud->display_as('cinemaNo', 'Cinema Number');
-		$output = $crud->render();
-		$this->mem_cinema_output($output);
-	}
-	
-	function mem_cinema_output($output = null){
-		$this->load->view('mem_cinema.php', $output);
-	}
-/************     Cinema System for member end     *************/
-
-/************     Member System for member start     *************/
-	public function mem_member()
-	{	
-		$this->load->view('header_member');
-		$crud = new grocery_CRUD();
-		$crud->set_theme('datatables');
-		
-		$crud->set_table('member');
-		$crud->set_subject('Member');
-		$crud->fields('memberNo', 'title', 'memberName', 'dateJoined', 'memberStat');
-		$crud->required_fields('memberNo', 'title', 'memberName', 'dateJoined', 'memberStat');
-		$crud->display_as('memberNo', 'Membership Number');
-		
-		$output = $crud->render();
-		$this->mem_member_output($output);
-	}
-	function mem_member_output($output = null){
-		$this->load->view('mem_member.php', $output);
-	}
-/************     Member System for member end     *************/
-
-/************     Screen System for member start     *************/
-	public function mem_screen()
-	{	
-		$this->load->view('header_member');
-		$crud = new grocery_CRUD();
-		$crud->set_theme('datatables');
-		
-		$crud->set_table('screen');
-		$crud->set_subject('Screen');
-		$crud->fields('screenNo', 'cinemaNo', 'numberOfSeats', 'price');
-		$crud->required_fields('screenNo', 'cinemaNo', 'numberOfSeats', 'price');
-		//$crud->set_relation_n_n('orders', 'order_items', 'orders', 'item_id', 'invoice_no', 'invoiceNo');
-		$crud->display_as('screenNo', 'Screen Number');
-		
-		$output = $crud->render();
-		$this->mem_screen_output($output);
-	}
-	function mem_screen_output($output = null){
-		$this->load->view('mem_screen.php', $output);
-	}
-/************     Screen System for member end     *************/
-
 /************     Film System for member start     *************/
 public function mem_film()
 {	
@@ -264,8 +199,8 @@ function mem_film_output($output = null){
 }
 /************     Film System for member end     *************/
 
-/************     Booking System for member start     *************/
-public function mem_booking()
+/************     Entry System for member start     *************/
+public function mem_entry()
 {	
 	$this->load->view('header_member');
 	$crud = new grocery_CRUD();
@@ -278,15 +213,57 @@ public function mem_booking()
 	$crud->display_as('bookingNo', 'Booking Number');
 	
 	$output = $crud->render();
-	$this->mem_booking_output($output);
+	$this->mem_entry_output($output);
 }
-function mem_booking_output($output = null){
-	$this->load->view('mem_booking.php', $output);
+function mem_entry_output($output = null){
+	$this->load->view('mem_entry.php', $output);
 }
-/************     Booking System for member end     *************/
+/************     Entry System for member end     *************/
 
-/************     Performance System for member start     *************/
-public function mem_performance()
+/************     Account management System for member start     *************/
+public function mem_manage_account()
+{	
+	$this->load->view('header_member');
+	$crud = new grocery_CRUD();
+	$crud->set_theme('datatables');
+	
+	$crud->set_table('booking');
+	$crud->set_subject('Booking');
+	$crud->fields('bookingNo', 'seatsRequired', 'bookingDate');
+	$crud->required_fields('bookingNo', 'seatsRequired', 'bookingDate');
+	$crud->display_as('bookingNo', 'Booking Number');
+	
+	$output = $crud->render();
+	$this->mem_manage_account_output($output);
+}
+function mem_manage_account_output($output = null){
+	$this->load->view('mem_manage_account.php', $output);
+}
+/************     Account management System for member end     *************/
+
+/************     Booking Management System for member start     *************/
+public function mem_manage_booking()
+{	
+	$this->load->view('header_member');
+	$crud = new grocery_CRUD();
+	$crud->set_theme('datatables');
+	
+	$crud->set_table('booking');
+	$crud->set_subject('Booking');
+	$crud->fields('bookingNo', 'seatsRequired', 'bookingDate');
+	$crud->required_fields('bookingNo', 'seatsRequired', 'bookingDate');
+	$crud->display_as('bookingNo', 'Booking Number');
+	
+	$output = $crud->render();
+	$this->mem_manage_booking_output($output);
+}
+function mem_manage_booking_output($output = null){
+	$this->load->view('mem_manage_booking.php', $output);
+}
+/************     Booking Management System for member end     *************/
+
+/************     Search and Book System for member start     *************/
+public function mem_search_book()
 {	
 	$this->load->view('header_member');
 	$crud = new grocery_CRUD();
@@ -299,13 +276,13 @@ public function mem_performance()
 	$crud->display_as('perfNo', 'Performance Number');
 	
 	$output = $crud->render();
-	$this->mem_performance_output($output);
+	$this->mem_search_book_output($output);
 }
-function mem_performance_output($output = null)
+function mem_search_book_output($output = null)
 {
-	$this->load->view('mem_performance.php', $output);
+	$this->load->view('mem_search_book.php', $output);
 }
-/************     Performance System for member end     *************/
+/************     Search and book System for member end     *************/
 /************           End of Member Portal           *************/
 
 	public function staff_view()
@@ -323,9 +300,9 @@ function mem_performance_output($output = null)
 	{	
 		$this->load->view('logout.php');
 	}
-	public function perf_query1_view()
+	public function mem_help()
 	{	
-		$this->load->view('header_staff');
-		$this->load->view('perf_query1_view.php');
+		$this->load->view('header_member');
+		$this->load->view('mem_help.php');
 	}
 }
