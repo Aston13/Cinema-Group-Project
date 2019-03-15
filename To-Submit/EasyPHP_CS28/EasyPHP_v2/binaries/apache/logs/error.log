@@ -655,3 +655,16 @@
 [Wed Mar 13 01:56:32.313344 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Wed Mar 13 01:56:34.314393 2019] [mpm_winnt:notice] [pid 13172:tid 804] AH00364: Child: All worker threads have exited.
 [Wed Mar 13 01:56:34.536655 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00430: Parent: Child process 13172 exited successfully.
+[Fri Mar 15 01:11:23.290360 2019] [mpm_winnt:notice] [pid 824:tid 732] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Fri Mar 15 01:11:23.290360 2019] [mpm_winnt:notice] [pid 824:tid 732] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Fri Mar 15 01:11:23.290360 2019] [core:notice] [pid 824:tid 732] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Fri Mar 15 01:11:23.326435 2019] [mpm_winnt:notice] [pid 824:tid 732] AH00418: Parent: Created child process 4372
+[Fri Mar 15 01:11:24.106352 2019] [mpm_winnt:notice] [pid 4372:tid 724] AH00354: Child: Starting 64 worker threads.
+[Fri Mar 15 02:25:05.072631 2019] [:error] [pid 4372:tid 1164] [client 127.0.0.1:60092] PHP Fatal error:  Call to a member function render() on a non-object in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\controllers\\main.php on line 184, referer: http://127.0.0.1:8080/mice/index.php/main/sys_performance
+[Fri Mar 15 04:30:11.146156 2019] [:error] [pid 4372:tid 1180] [client 127.0.0.1:50328] script 'C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/data/localweb/.style.php' not found or unable to stat, referer: http://localhost:8080/mice/index.php/main/member_view
+[Fri Mar 15 04:32:27.727939 2019] [:error] [pid 4372:tid 1180] [client 127.0.0.1:50365] script 'C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/data/localweb/.style.php' not found or unable to stat, referer: http://localhost:8080/mice/index.php/main/member_view
+[Fri Mar 15 04:35:04.305284 2019] [:error] [pid 4372:tid 1180] [client 127.0.0.1:50380] script 'C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/data/localweb/.style.php' not found or unable to stat, referer: http://localhost:8080/mice/index.php/main/member_view
+[Fri Mar 15 04:39:14.708895 2019] [:error] [pid 4372:tid 1180] [client 127.0.0.1:50412] script 'C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/data/localweb/.style.php' not found or unable to stat, referer: http://localhost:8080/mice/index.php/main/member_view
+[Fri Mar 15 04:53:32.463997 2019] [mpm_winnt:notice] [pid 824:tid 732] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Mar 15 04:53:34.466367 2019] [mpm_winnt:notice] [pid 4372:tid 724] AH00364: Child: All worker threads have exited.
+[Fri Mar 15 04:53:34.583979 2019] [mpm_winnt:notice] [pid 824:tid 732] AH00430: Parent: Child process 4372 exited successfully.

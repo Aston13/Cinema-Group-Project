@@ -24,10 +24,10 @@
 			(
 			SELECT
 				DATE_FORMAT(A.perfDate, '%D %M %Y') AS Date, TIME_FORMAT(A.startTime, '%H:%i') AS Time, 
-				C.cinemaName AS Cinema, A.screenNo AS Screen,
+				C.cinemaName AS Cinema, A.screenNo AS `Screen Number`,
 				B.filmTitle AS Film, C.location AS Location,
 				(@row_number:=@row_number + 1) AS Row_Num, A.perfNo AS perfNo,
-				C.cinemaNo AS CinemaNo, S.price AS price, A.seatsRemain AS Seats
+				C.cinemaNo AS CinemaNo, S.price AS price, A.seatsRemain AS `Seats Remaining`
 			FROM
 				(SELECT @row_number:=0) AS t,
 				performance AS A
@@ -54,7 +54,7 @@
 			$returnedResults = mysql_result(mysql_query("SELECT COUNT(Row_Num) FROM temp"),0);
 			
 			if($returnedResults > 0){
-				$query = $this->db->query('SELECT Date, Time, Cinema, Screen, Film, Location, Seats, Price FROM temp;');
+				$query = $this->db->query('SELECT Date, Time, Cinema, `Screen Number`, Film, Location, `Seats Remaining`, Price FROM temp;');
 				echo $this->table->generate($query);
 				echo("<form class ='resultbuttons' action='' method='post'>");
 				echo("<b>Seats Required: </b>");
@@ -76,7 +76,7 @@
 		if (($seatsRequired) > 0){
 			// retrieve selected row number
 			$value = substr(($_POST['resultButton']),12,3);
-			$remainingSeats = mysql_result(mysql_query("SELECT Seats FROM temp WHERE Row_Num = $value"),0);
+			$remainingSeats = mysql_result(mysql_query("SELECT `Seats Remaining` FROM temp WHERE Row_Num = $value"),0);
 			if ($seatsRequired <= $remainingSeats){
   
 				// retrieve selected Date as string

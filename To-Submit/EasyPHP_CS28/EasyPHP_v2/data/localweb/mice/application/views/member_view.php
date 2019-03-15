@@ -22,8 +22,16 @@
 </head>
 
 <body>
-	<b id="welcome">Welcome, <i><?php echo $login_session; ?></i>!</b>
-	<br>
-	<b id="logout"><a href="logout">Log Out</a></b>
+	<div class = "welcome">
+		<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
+		<b id="welcome"><i><?php echo $user_check; ?></i></b>
+		<br>
+		Today's date is <?php echo date("d/m/Y"); ?>
+		<br>
+		<b id="logout"><a href="logout">Log Out</a></b>
+		<br>
+	</div>
+    <h1> Welcome to the Member's Portal </h1>
+    <h1> Select the help tab for help with using this system</h1>
 </body>
 </html>

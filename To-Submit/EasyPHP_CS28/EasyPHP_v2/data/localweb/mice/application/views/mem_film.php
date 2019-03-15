@@ -21,20 +21,38 @@
         }					
     </style>
 
-	<?php 
-		foreach($css_files as $file): ?>
-		<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
-	<?php endforeach; ?>
-
-	<?php foreach($js_files as $file): ?>
-		<script src="<?php echo $file; ?>"></script>
-	<?php endforeach; ?>
-
 </head>
 <body>
-	<b id="welcome">Welcome, <i><?php echo $login_session; ?></i>!</b>
-	<br>
-	<b id="logout"><a href="logout">Log Out</a></b>
-	<?php echo $output; ?>
+	<div class = "welcome">
+		<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
+		<b id="welcome"><i><?php echo $user_check; ?></i></b>
+		<br>
+		Today's date is <?php echo date("d/m/Y"); ?>
+		<br>
+		<b id="logout"><a href="logout">Log Out</a></b>
+		<br>
+	</div>
+
+	<h1>Film List</h1>
+	<p><b>Filter Results:</b></p>
+	<div id="query">
+    	    <form action="" method="post">
+
+				<label>Film Title:</label>
+				<input name ="filmTitle" placeholder="Film Title" type="text">
+
+				<label>Director:</label>
+				<input name ="director" placeholder="Director's Name" type="text">
+
+				<label>Year of Release:</label>
+				<input name="yearOfRelease" type="year" >
+				
+				<input name="search" type="submit" value="Search">
+            </form>
+   		</div>
+
+		<div class = "container"> 
+			<?php include('mem_film_query.php'); ?>
+		</div>
 </body>
 </html>

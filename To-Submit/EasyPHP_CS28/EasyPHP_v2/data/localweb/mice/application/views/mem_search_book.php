@@ -46,7 +46,7 @@
 	<b id="logout"><a href="logout">Log Out</a></b>
 	
 	
-	<h1>Search for performances</h1>
+	<h1>Search for Performances</h1>
 			<!-- Display performances searched by: 
 		filmName,
 		 screenNo(via cinemaName),
@@ -54,7 +54,7 @@
 		   startTime(=>),
 		    cinemaNo  
 			-->
-
+	<p><b>Filter Results:</b></p>
 		<div id="query">
     	    <form action="" method="post">
 				<label>Location:</label>

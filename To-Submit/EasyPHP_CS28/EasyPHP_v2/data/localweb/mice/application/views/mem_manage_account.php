@@ -26,10 +26,15 @@
 
 </head>
 <body>
-	<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
-	<b id="welcome"><i><?php echo $user_check; ?></i></b>
-	<br>
-	<b id="logout"><a href="logout">Log Out</a></b>
+	<div class = "welcome">
+		<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
+		<b id="welcome"><i><?php echo $user_check; ?></i></b>
+		<br>
+		Today's date is <?php echo date("d/m/Y"); ?>
+		<br>
+		<b id="logout"><a href="logout">Log Out</a></b>
+		<br>
+	</div>
 
 	<h1>Account Management</h1>
 	

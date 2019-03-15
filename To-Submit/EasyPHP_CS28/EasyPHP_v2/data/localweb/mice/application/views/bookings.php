@@ -1,6 +1,7 @@
 <?php
 	// Define $variables
-	$error = 'cant be left blank'; // Variable To Store Error Message 
+	$error = 'cant be left blank'; // Variable To Store Error Message
+	$userMsg = '';
 	$today = date("M,d,Y h:i:s A"); 
 	// Connect to SQL Database
 	$conn = mysqli_connect("localhost", "root", "", "mice");
@@ -35,7 +36,7 @@
 
 			$bookingExist = mysql_result(mysql_query("SELECT COUNT(bookingNo) FROM temp"),0);
 			if($bookingExist < 1){
-				echo("No bookings were found for the booking number <b>$bookingNo</b> under your account $user_check.");
+				$userMsg = ("No bookings were found for the booking number <b>$bookingNo</b> under your account $user_check.");
 			} else {
 				$seatsCancel = mysql_result(mysql_query("SELECT seatsRequired FROM mice.booking WHERE bookingNo = $bookingNo"),0);
 				$perfNoCancel = mysql_result(mysql_query("SELECT perfNo FROM mice.booking WHERE bookingNo = $bookingNo"),0);
@@ -48,10 +49,10 @@
 				$dateRef = mysql_result(mysql_query("SELECT perfDate FROM temp"),0);
 				$screenRef = mysql_result(mysql_query("SELECT screenNo FROM temp"),0);
 				$filmRef = mysql_result(mysql_query("SELECT filmTitle FROM temp"),0);
-				echo ("Your booking $bookingNo showing on screen $screenRef on $dateRef to watch $filmRef has been cancelled.");
+				$userMsg = ("Your booking $bookingNo showing on screen $screenRef on $dateRef to watch $filmRef has been cancelled.");
 			}
 		} else {
-			echo("You do not have permission to cancel bookings for member $enteredID.");
+			$userMsg = ("You do not have permission to cancel bookings for member $enteredID.");
 		}
 	}
 	// Check booking details and permission to access screen
@@ -84,11 +85,11 @@
 		$bookingExist = mysql_result(mysql_query("SELECT COUNT(bookingNo) FROM temp"),0);
 		if($bookingExist < 1){
 			//permission denied - error message
-			echo("Permission denied. This booking number <b>$checkBooking</b> doesnt exist for your account $user_check.");
+			$userMsg = ("Permission denied. This booking number <b>$checkBooking</b> doesnt exist for your account $user_check.");
 			
 			//write failed attempt to entry_log.txt
 			$myfile = fopen("application/entry_logs.txt", "a") or die("Unable to open file!");
-			$txt = "'$today': Member '$user_check' failed to gain entry to booking '$checkBooking'.";
+			$txt = "'$today': Member '$user_check' failed to gain entry to booking #'$checkBooking'.";
 			fwrite($myfile, "\r\n". $txt);
 			fclose($myfile);
 
@@ -97,11 +98,11 @@
 			$screenRef = mysql_result(mysql_query("SELECT screenNo FROM temp"),0);
 			$filmRef = mysql_result(mysql_query("SELECT filmTitle FROM temp"),0);
 			//permission granted
-			echo ("Your booking number $checkBooking permits you to enter screen $screenRef on $dateRef to watch $filmRef.");
+			$userMsg = ("Your booking number $checkBooking permits you to enter screen $screenRef on $dateRef to watch $filmRef.");
 			
 			//write granted attempt to entry_log.txt
 			$myfile = fopen("application/entry_logs.txt", "a") or die("Unable to open file!");
-			$txt = "'$today': Member '$user_check' was granted entry to booking '$checkBooking'.";
+			$txt = "'$today': Member '$user_check' was granted entry to booking #'$checkBooking'.";
 			fwrite($myfile, "\r\n". $txt);
 			fclose($myfile);
 		}

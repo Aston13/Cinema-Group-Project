@@ -17,8 +17,6 @@
 			$membershipQuery = mysql_result(mysql_query("SELECT memberStat FROM member WHERE memberNo= $username"),0);
 			// To protect MySQL injection for Security purpose 
 			$stmt = $conn->prepare($query); 
-			echo($username);
-			echo($password);
 			$stmt->bind_param("ss", $username, $password); 
 			$stmt->execute(); 
 			$stmt->bind_result($username, $password); 

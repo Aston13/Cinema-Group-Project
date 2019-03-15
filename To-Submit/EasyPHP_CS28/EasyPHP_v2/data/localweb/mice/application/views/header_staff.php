@@ -24,8 +24,9 @@
 				<li><a href='<?php echo site_url('main/sys_film')?>'>Film</a></li>
 				<li><a href='<?php echo site_url('main/sys_booking')?>'>Booking</a></li>
 				<li><a href='<?php echo site_url('main/sys_performance')?>'>Performance</a></li>
+				<li><a href='<?php echo site_url('main/sys_entry_log')?>'>Entry Log</a></li>
 				<ul id="rightnav">
-					<li><a href='<?php echo site_url('main/help')?>'>Help</a></li>
+					<li><a href='<?php echo site_url('main/staff_help')?>'>Help</a></li>
 					<li><a href='<?php echo site_url('main/member_view')?>'>View as Member</a></li>
 				</ul>
 			</ul>
