@@ -18,14 +18,13 @@
 		<div>
 			<ul id="nav">
 				<li><a href='<?php echo site_url('main/member_view')?>'>Home</a></li>
-				<li><a href='<?php echo site_url('main/mem_cinema')?>'>Cinema</a></li>
-				<li><a href='<?php echo site_url('main/mem_screen')?>'>Screen</a></li>
-				<li><a href='<?php echo site_url('main/mem_member')?>'>Member</a></li>
-				<li><a href='<?php echo site_url('main/mem_film')?>'>Film</a></li>
-				<li><a href='<?php echo site_url('main/mem_booking')?>'>Booking</a></li>
-				<li><a href='<?php echo site_url('main/mem_performance')?>'>Performance</a></li>
+				<li><a href='<?php echo site_url('main/mem_film')?>'>Films</a></li>
+				<li><a href='<?php echo site_url('main/mem_search_book')?>'>Search and Book</a></li>
+				<li><a href='<?php echo site_url('main/mem_manage_booking')?>'>Manage Bookings</a></li>
+				<li><a href='<?php echo site_url('main/mem_entry')?>'>Entry</a></li>
 				<ul id="rightnav">
-					<li><a href='<?php echo site_url('main/help')?>'>Help</a></li>
+					<li><a href='<?php echo site_url('main/mem_help')?>'>Help</a></li>
+					<li><a href='<?php echo site_url('main/mem_manage_account')?>'>Manage Account</a></li>
 				</ul>
 			</ul>
 		</div>

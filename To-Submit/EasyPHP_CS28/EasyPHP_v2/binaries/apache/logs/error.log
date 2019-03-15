@@ -616,3 +616,42 @@
 [Tue Mar 12 13:57:54.807264 2019] [core:notice] [pid 6720:tid 736] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
 [Tue Mar 12 13:57:54.815264 2019] [mpm_winnt:notice] [pid 6720:tid 736] AH00418: Parent: Created child process 10420
 [Tue Mar 12 13:57:55.927247 2019] [mpm_winnt:notice] [pid 10420:tid 704] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 12 15:01:11.981538 2019] [:error] [pid 10420:tid 1188] [client 127.0.0.1:64185] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 80, referer: http://localhost:8080/mice/index.php/main/mem_performance
+[Tue Mar 12 15:15:40.461606 2019] [:error] [pid 10420:tid 1188] [client 127.0.0.1:64976] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 72, referer: http://localhost:8080/mice/index.php/main/mem_performance
+[Tue Mar 12 15:49:38.391602 2019] [mpm_winnt:notice] [pid 6720:tid 736] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 12 15:49:40.394376 2019] [mpm_winnt:notice] [pid 10420:tid 704] AH00364: Child: All worker threads have exited.
+[Tue Mar 12 15:49:40.437074 2019] [mpm_winnt:notice] [pid 6720:tid 736] AH00430: Parent: Child process 10420 exited successfully.
+[Tue Mar 12 16:47:17.004678 2019] [mpm_winnt:notice] [pid 1672:tid 764] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Tue Mar 12 16:47:17.004678 2019] [mpm_winnt:notice] [pid 1672:tid 764] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Tue Mar 12 16:47:17.004678 2019] [core:notice] [pid 1672:tid 764] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Tue Mar 12 16:47:17.011608 2019] [mpm_winnt:notice] [pid 1672:tid 764] AH00418: Parent: Created child process 9932
+[Tue Mar 12 16:47:17.797597 2019] [mpm_winnt:notice] [pid 9932:tid 700] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 12 17:50:54.576248 2019] [mpm_winnt:notice] [pid 1672:tid 764] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 12 17:50:56.577527 2019] [mpm_winnt:notice] [pid 9932:tid 700] AH00364: Child: All worker threads have exited.
+[Tue Mar 12 17:50:56.607459 2019] [mpm_winnt:notice] [pid 1672:tid 764] AH00430: Parent: Child process 9932 exited successfully.
+[Tue Mar 12 18:10:50.170078 2019] [mpm_winnt:notice] [pid 6212:tid 780] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Tue Mar 12 18:10:50.170078 2019] [mpm_winnt:notice] [pid 6212:tid 780] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Tue Mar 12 18:10:50.170078 2019] [core:notice] [pid 6212:tid 780] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Tue Mar 12 18:10:50.177077 2019] [mpm_winnt:notice] [pid 6212:tid 780] AH00418: Parent: Created child process 2028
+[Tue Mar 12 18:10:51.167079 2019] [mpm_winnt:notice] [pid 2028:tid 704] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 12 18:27:47.516882 2019] [:error] [pid 2028:tid 1196] [client 127.0.0.1:51802] PHP Fatal error:  Call to a member function format() on a non-object in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 85, referer: http://127.0.0.1:8080/mice/index.php/main/mem_performance
+[Tue Mar 12 18:28:04.565518 2019] [:error] [pid 2028:tid 1196] [client 127.0.0.1:51809] PHP Fatal error:  Call to a member function format() on a non-object in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 85, referer: http://127.0.0.1:8080/mice/index.php/main/mem_performance
+[Tue Mar 12 19:16:27.505591 2019] [mpm_winnt:notice] [pid 6212:tid 780] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 12 19:16:29.507406 2019] [mpm_winnt:notice] [pid 2028:tid 704] AH00364: Child: All worker threads have exited.
+[Tue Mar 12 19:16:29.539314 2019] [mpm_winnt:notice] [pid 6212:tid 780] AH00430: Parent: Child process 2028 exited successfully.
+[Tue Mar 12 21:55:19.467574 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Tue Mar 12 21:55:19.467574 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Tue Mar 12 21:55:19.467574 2019] [core:notice] [pid 6388:tid 596] AH00094: Command line: 'C:\\Users\\Aston\\Desktop\\EASYPH~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Aston/Desktop/EasyPHP_CS28/EasyPHP_v2/binaries/apache'
+[Tue Mar 12 21:55:19.476574 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00418: Parent: Created child process 13172
+[Tue Mar 12 21:55:20.466582 2019] [mpm_winnt:notice] [pid 13172:tid 804] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 12 22:54:49.494206 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:52880] PHP Parse error:  syntax error, unexpected '$seatsRequired' (T_VARIABLE), expecting '(' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 77, referer: http://127.0.0.1:8080/mice/index.php/main/mem_performance
+[Tue Mar 12 22:58:46.971755 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:52891] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR) in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 77, referer: http://127.0.0.1:8080/mice/index.php/main/mem_performance
+[Tue Mar 12 23:15:04.254825 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:53055] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 105, referer: http://127.0.0.1:8080/mice/index.php/main/mem_performance
+[Wed Mar 13 00:08:15.723709 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:53353] PHP Parse error:  syntax error, unexpected ')' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 104, referer: http://127.0.0.1:8080/mice/index.php/main/mem_booking
+[Wed Mar 13 00:15:05.678284 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:53413] PHP Parse error:  syntax error, unexpected ')' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 104
+[Wed Mar 13 00:16:47.298183 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:53426] PHP Parse error:  syntax error, unexpected ')' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 103
+[Wed Mar 13 00:17:01.802774 2019] [:error] [pid 13172:tid 1180] [client 127.0.0.1:53426] PHP Parse error:  syntax error, unexpected ')' in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\views\\query.php on line 103, referer: http://127.0.0.1:8080/mice/index.php/main/member_view
+[Wed Mar 13 00:51:13.124683 2019] [:error] [pid 13172:tid 1204] [client 127.0.0.1:53593] PHP Fatal error:  Call to undefined method Main::mem_booking_output() in C:\\Users\\Aston\\Desktop\\EasyPHP_CS28\\EasyPHP_v2\\data\\localweb\\mice\\application\\controllers\\main.php on line 258, referer: http://localhost:8080/mice/index.php/main/mem_search_book
+[Wed Mar 13 01:56:32.313344 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Mar 13 01:56:34.314393 2019] [mpm_winnt:notice] [pid 13172:tid 804] AH00364: Child: All worker threads have exited.
+[Wed Mar 13 01:56:34.536655 2019] [mpm_winnt:notice] [pid 6388:tid 596] AH00430: Parent: Child process 13172 exited successfully.

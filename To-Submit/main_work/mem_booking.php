@@ -1,0 +1,64 @@
+<?php
+	include('session.php');
+	if(!isset($_SESSION['login_user'])){ 
+		header('Location:http://localhost:8080/mice/index.php'); // Redirecting To Home Page 
+	}
+
+	include('bookings.php');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Member Portal</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Calibri;
+        }
+        p.p-centre {
+            text-align: center;
+            font-family: Arial;
+        }					
+    </style>
+
+
+</head>
+<body>
+	<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
+	<b id="welcome"><i><?php echo $user_check; ?></i></b>
+	<br>
+	<b id="logout"><a href="logout">Log Out</a></b>
+
+	<h1>Bookings</h1>
+	
+	<div id="bookings">
+		<form action="" method="post">
+			<h2>Cancel a booking</h2>
+			<label>Enter your member ID number and booking number to cancel</label>
+			<input name ="cancelBooking" value=<?php echo $user_check; ?> type="text">
+			<input name ="bookingNo" placeholder="Booking Number" type="text">
+			<input name="submit_cancel" type="submit" value="Cancel Booking">
+			<br>		
+		</form>
+
+		<form action="" method="post">
+			<h2>Check a booking number</h2>
+			<label>Enter your booking reference number to check your bookings:</label>
+			<input name ="checkBooking" placeholder="Booking Number" type="text">
+			<input name="submit_check" type="submit" value="Check">
+		</form>
+
+		<form action="" method="post">
+			<h2>Cancel your membership</h2>
+			<h3>If you confirm your cancellation, your membership status will be revoked
+			and you will be redirected to the login page</h3>
+			<label>Enter your password to confirm your cancellation:</label>
+			<input name ="cancelMembership" type="password" placeholder="**********">
+			<input name="submit_cancel_mem" type="submit" value="Cancel Membership">
+		</form>
+	</div>
+
+</body>
+</html>
