@@ -1,1 +1,0 @@
-<?php $notification = array('check_date'=>'20190310','date'=>'20190304','status'=>'1','link'=>'https://warehouse.easyphp.org/inventory-devserver?s=not20190304','message'=>'Module update : PhpMyAdmin 4.8.5'); ?>
