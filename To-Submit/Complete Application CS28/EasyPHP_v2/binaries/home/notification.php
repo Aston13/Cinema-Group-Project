@@ -1,0 +1,1 @@
+<?php $notification = array('check_date'=>'20190315','date'=>'20190310','status'=>'1','link'=>'https://warehouse.easyphp.org/inventory-devserver?s=not20190310','message'=>'PHP Updates : PHP 7.3.3 - 7.2.16 - 7.1.27 x64 and x86 with the new Xdebug 2.7.0'); ?>

@@ -1,0 +1,8 @@
+2019-03-02 23:39:43 6672 [Warning] Did not write failed 'REVOKE ALL PRIVILEGES ON *.* FROM ''@'%'' into binary log while granting/revoking privileges in databases.
+2019-03-03 00:38:28 6672 [Note] C:\Users\Aston\Desktop\EASYPH~1\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: Normal shutdown
+
+2019-03-03 00:38:28 6672 [Note] Giving 4 client threads a chance to die gracefully
+2019-03-03 00:38:28 6672 [Note] Event Scheduler: Purging the queue. 0 events
+2019-03-03 00:38:28 6672 [Note] Shutting down slave threads
+2019-03-03 00:38:30 6672 [Note] Forcefully disconnecting 0 remaining clients
+2019-03-03 00:38:30 6672 [Note] Binlog end
