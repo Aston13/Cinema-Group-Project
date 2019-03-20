@@ -26,21 +26,27 @@
 
 </head>
 <body>
-	<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
-	<b id="welcome"><i><?php echo $user_check; ?></i></b>
-	<br>
-	<b id="logout"><a href="logout">Log Out</a></b>
+	<div class = "welcome">
+		<b id="welcome">Welcome, <i><?php echo $login_session; ?></i> | </b>
+		<b id="welcome"><i><?php echo $user_check; ?></i></b>
+		<br>
+		Today's date is <?php echo date("d/m/Y"); ?>
+		<br>
+		<b id="logout"><a href="logout">Log Out</a></b>
+		<br>
+	</div>
 
 	<h1>Entry Access</h1>
 	
 	<div>
 		<form action="" method="post">
 			<h2>Check entry to a performance you have booked</h2>
-			<label>Enter your booking reference number to check if you are permissed:</label>
+			<label>Enter your booking reference number to check if you are permissed to enter:</label>
 			<input name ="checkBooking" placeholder="Booking Number" type="text">
 			<input name="submit_check" type="submit" value="Check">
 		</form>
 	</div>
+	<?php echo($userMsg) ?>
 
 </body>
 </html>

@@ -32,9 +32,16 @@
 
 </head>
 <body>
-	<b id="welcome">Welcome Director <i><?php echo $login_session; ?></i>.</b>
-	<br>
-	<b id="logout"><a href="logout">Log Out</a></b>
-	<?php echo $output; ?>
+    <div class = "welcome">
+        <b id="welcome">Welcome Director <i><?php echo $login_session; ?></i>.</b>
+        <br>
+	    Today's date is <?php echo date("d/m/Y"); ?>
+        <br>
+        <b id="logout"><a href="logout">Log Out</a></b>
+    </div>
+	
+	<div class = "output">
+		<?php echo $output; ?>
+	</div>
 </body>
 </html>
