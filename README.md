@@ -1,4 +1,4 @@
-# Group Project Three
+# Group Project Three - Creation of a Cinema Website
 
 University final group project for the CSDE (Computer Science Development Exercise) module.
 
@@ -13,13 +13,13 @@ University final group project for the CSDE (Computer Science Development Exerci
 * Alterantively, download [GitHub Desktop](https://desktop.github.com/) and use that for everything.
 
 
-## Tasks
+## Listed Project Tasks from Briefing
 
 -	Read all the documentation, especially User Stories & Client Priorities
 
 -	Identify an overall project plan, and produce an initial Data Model (E-R diagram)
 
-- Decide on priorities. Produce Sprint Cycle1 Plan. Get it signed by the Sprint Master
+- Decide on priorities. Produce Sprint Cycle 1 Plan. Get it signed by the Sprint Master
    Carry out the planned the tasks, including:
   - [ ]	produce test plan/s 
   -	[ ] develop your software
@@ -27,7 +27,7 @@ University final group project for the CSDE (Computer Science Development Exerci
   -	[ ]	review, make any corrections, re-test, and repeat.
   - [ ]	At the end of Sprint Cycle 1 evaluate what has been achieved and identify what still  needs to be done. Use this to decide on aims for Sprint Cycle 2:
 
-- Decide on priorities. Produce Sprint Cycle2 Plan. Get it signed by the Sprint Master
+- Decide on priorities. Produce Sprint Cycle 2 Plan. Get it signed by the Sprint Master
 Carry out the planned the tasks, including:
   -	[ ]	produce test plan/s 
   -	[ ]	develop your software
@@ -35,7 +35,7 @@ Carry out the planned the tasks, including:
   -	[ ]	review, make any corrections, re-test, and repeat.
   - [ ]	At the end of Sprint Cycle 2 evaluate what has been achieved and identify what still  needs to be done. Use this to decide on aims for Sprint Cycle 3:
   
-- Decide on priorities. Produce Sprint Cycle3 Plan. Get it signed by the Sprint Master
+- Decide on priorities. Produce Sprint Cycle 3 Plan. Get it signed by the Sprint Master
 Carry out the planned the tasks, including:
   - [ ]	produce test plan/s 
   - [ ]	develop your software
